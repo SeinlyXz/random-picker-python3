@@ -2,6 +2,14 @@ import random
 from time import sleep as s
 from os import system as t
 
+
+#########################################################
+#                                                       #
+#        THIS PROGRAM WAS CREATED IN WINDOWS            #
+# IF YOU USE LINUX, CHANGE THE t('cls') to t('clear')   #
+#                                                       #
+#########################################################
+
 t('cls')
 
 def main():
