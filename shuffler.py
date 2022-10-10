@@ -1,16 +1,18 @@
 import random
 from time import sleep as s
 from os import system as t
+import platform
 
 
-#########################################################
-#                                                       #
-#        THIS PROGRAM WAS CREATED IN WINDOWS            #
-# IF YOU USE LINUX, CHANGE THE t('cls') to t('clear')   #
-#                                                       #
-#########################################################
+#    _____ _            __  __ _           
+#   / ____| |          / _|/ _| |          
+#  | (___ | |__  _   _| |_| |_| | ___ _ __ 
+#   \___ \| '_ \| | | |  _|  _| |/ _ \ '__|
+#   ____) | | | | |_| | | | | | |  __/ |   
+#  |_____/|_| |_|\__,_|_| |_| |_|\___|_|   
+                                         
+                                         
 
-t('cls')
 
 def main():
     jml = int(input("[*] Masukkan jumlah siswa: "))
@@ -26,7 +28,7 @@ def hitung(jml, klm):
             print("[*] {}".format(i))
             s(1)
             if i == 1:
-                t('cls')
+                t('{}'.format(console))
                 main1()
     else:
         g = [] # Untuk membuat list kosong yang akan terinput saat variabel "jml" sudah diisi
@@ -67,12 +69,25 @@ def menu():
     print("|                                         |")
     print("-------------------------------------------")
 
+plt = platform.system()
+if plt == "Windows":
+    console = "cls"
+elif plt == "Linux" or plt == "Darwin":
+    console = "clear"
+else:
+    print("[*] Unidentified System")
+    exit()
+
+t('{}'.format(console))
+
+
 for i in range(3, -1, -1):
     menu()
     print("Tunggu {}-detik lagi".format(i))
     s(1)
-    t('cls')
+    t('{}'.format(console))
 
 # Memulai program
-menu()
-main()
+if __name__ == '__main__':
+    menu()
+    main()
