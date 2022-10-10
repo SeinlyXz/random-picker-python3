@@ -15,8 +15,8 @@ import platform
 
 
 def main():
-    jml = int(input("[*] Masukkan jumlah siswa: "))
-    klm = int(input("[*] Jumlah siswa per-kelompok: "))
+    jml = int(input("[*] Masukkan jumlah orang: "))
+    klm = int(input("[*] Jumlah orang per-kelompok: "))
     hitung(jml, klm) # Untuk next ke fungsi hitung() dengan menginputkan variabel jml dan kml
         
 def hitung(jml, klm):
